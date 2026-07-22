@@ -1,5 +1,6 @@
 package com.asa.pojo;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import java.time.LocalDateTime;
@@ -10,6 +11,7 @@ import java.time.LocalDateTime;
 public class User {
     private Integer id;//主键ID
     private String username;//用户名
+    @JsonIgnore //转换成Json字符的时候忽略掉password这个属性，避免出现在最后的返回结果中。
     private String password;//密码
     private String nickname;//昵称
     private String email;//邮箱

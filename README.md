@@ -18,7 +18,7 @@ A Spring Boot practice project built while learning backend development.
 
 - ✅ User registration
 
-- ⏳ User login
+- ✅ User login
 
 - ⏳ JWT authentication
 

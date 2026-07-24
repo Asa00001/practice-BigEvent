@@ -5,10 +5,7 @@ target/
 .kotlin
 
 ### IntelliJ IDEA ###
-.idea/modules.xml
-.idea/jarRepositories.xml
-.idea/compiler.xml
-.idea/libraries/
+.idea/
 *.iws
 *.iml
 *.ipr
@@ -38,5 +35,5 @@ build/
 ### Mac OS ###
 .DS_Store
 
-# Local development configuration (contains database credentials)
+### Local development configuration (contains database credentials) ###
 src/main/resources/application-dev.yml

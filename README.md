@@ -16,13 +16,22 @@ A Spring Boot practice project built while learning backend development.
 
 ## Features
 
+### User Module
 - ✅ User registration
+- ✅ User login (JWT authentication)
+- ✅ Get user information
+- ✅ Update user profile
+- ✅ Update avatar
+- ✅ Update password
 
-- ✅ User login
+### Authentication
+- JWT authentication
+- Login interceptor
+- ThreadLocal user context
 
-- ⏳ JWT authentication
-
-- ⏳ Article management
+### Validation
+- Hibernate Validator
+- Global exception handling
 
 ## Status
 

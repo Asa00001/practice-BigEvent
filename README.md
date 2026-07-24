@@ -24,6 +24,14 @@ A Spring Boot practice project built while learning backend development.
 - ✅ Update avatar
 - ✅ Update password
 
+### Category Management
+
+- ✅ Create category
+- ✅ List categories
+- Get category details
+- Update category
+- Delete category
+
 ### Authentication
 - JWT authentication
 - Login interceptor

@@ -1,24 +1,34 @@
 package com.asa.controller;
 
+import com.asa.mapper.ArticleMapper;
+import com.asa.pojo.Article;
+import com.asa.pojo.PageBean;
 import com.asa.pojo.Result;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.asa.service.ArticleService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/article")
 public class ArticleController {
-    @GetMapping("list")
-    public Result<String> list(/*@RequestHeader("Authorization") String token, HttpServletResponse response*/) {
-//        //验证token
-//        try {
-//            Map<String, Object> claims = JwtUtil.parseToken(token);
-//            return Result.success("全部文章数据……");
-//        } catch (Exception e) {
-//            //HTTP响应状态码为401
-//            response.setStatus(401);
-//            return Result.error("未登陆！");
-//        }
-        return Result.success("全部文章数据……");
+    @Autowired
+    private ArticleService articleService;
+
+    @PostMapping
+    public Result add(@RequestBody @Validated Article article) {
+        articleService.add(article);
+        return Result.success();
+    }
+
+    @GetMapping
+    public Result<PageBean<Article>> list(
+            Integer pageNum,
+            Integer pageSize,
+            @RequestParam(required = false) Integer categoryId,
+            @RequestParam(required = false) String state
+    ) {
+        PageBean<Article> pb = articleService.list(pageNum, pageSize, categoryId, state);
+        return Result.success(pb);
     }
 }

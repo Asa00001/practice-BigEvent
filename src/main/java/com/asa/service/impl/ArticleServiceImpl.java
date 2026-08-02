@@ -3,6 +3,7 @@ package com.asa.service.impl;
 import com.asa.mapper.ArticleMapper;
 import com.asa.pojo.Article;
 import com.asa.pojo.PageBean;
+import com.asa.pojo.Result;
 import com.asa.service.ArticleService;
 import com.asa.utils.ThreadLocalUtil;
 import com.github.pagehelper.Page;
@@ -50,5 +51,31 @@ public class ArticleServiceImpl implements ArticleService {
         pb.setTotal(p.getTotal());
         pb.setItems(p.getResult());
         return pb;
+    }
+
+    @Override
+    public Article detail(Integer id) {
+        Map<String, Object> map = ThreadLocalUtil.get();
+        Integer userId = (Integer) map.get("id");
+        return articleMapper.detail(id, userId);
+    }
+
+    @Override
+    public void update(Article article) {
+        Map<String, Object> map = ThreadLocalUtil.get();
+        Integer userId = (Integer) map.get("id");
+        article.setUpdateTime(LocalDateTime.now());
+        articleMapper.update(article, userId);
+    }
+
+    @Override
+    public Result delete(Integer id) {
+        Map<String, Object> map = ThreadLocalUtil.get();
+        Integer userId = (Integer) map.get("id");
+        int row = articleMapper.delete(id, userId);
+        if(row == 0) {
+            return Result.error("文章不存在！");
+        }
+        return Result.success();
     }
 }

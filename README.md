@@ -1,6 +1,6 @@
 # practice-BigEvent
 
-A Spring Boot practice project built while learning backend development.
+A full-stack learning project featuring modern Java backend development and web technologies.
 
 ## Tech Stack
 
@@ -9,6 +9,8 @@ A Spring Boot practice project built while learning backend development.
 - Spring MVC
 - MyBatis
 - MySQL
+- Redis
+- Alibaba Cloud OSS
 - JWT
 - Hibernate Validator
 - PageHelper
@@ -24,7 +26,6 @@ A Spring Boot practice project built while learning backend development.
 - ✅ Update password
 
 ### Category Management
-
 - ✅ Create category
 - ✅ List categories
 - ✅ Get category details
@@ -32,28 +33,54 @@ A Spring Boot practice project built while learning backend development.
 - ✅ Delete category
 
 ### Article Management
-
 - ✅ Create article
 - ✅ Paginated article query with dynamic filtering
-- Article details
-- Update article
-- Delete article
+- ✅ Get article details
+- ✅ Update article
+- ✅ Delete article
 
-### Authentication
-- JWT authentication
-- Login interceptor
-- ThreadLocal user context
+### File Upload
+- ✅ Upload images to Alibaba Cloud OSS
+- ✅ Generate unique filenames using UUID
+- ✅ Return public file URL
+
+### Authentication & Security
+- ✅ JWT authentication
+- ✅ Redis-based token validation
+- ✅ Automatic token invalidation after password update
+- ✅ Login interceptor
+- ✅ ThreadLocal user context
 
 ### Validation
-- Hibernate Validator
-- Global exception handling
-- Validation groups
-- Custom validation annotation
+- ✅ Hibernate Validator
+- ✅ Global exception handling
+- ✅ Validation groups
+- ✅ Custom validation annotation
 
 ### Pagination
-- PageHelper integration
-- Generic PageBean response
+- ✅ PageHelper integration
+- ✅ Generic PageBean response
+---
 
 ## Status
 
-Currently under development.
+## Project Status
+
+### Backend
+- ✅ RESTful API completed
+- ✅ Database integration
+- ✅ Redis integration
+- ✅ OSS file upload
+- ✅ Authentication & authorization
+
+### Frontend
+
+- ⏳ Vue frontend integration (planned)
+
+---
+
+## Status
+
+🚧 This project is still under development.
+
+The backend API has been completed. The next stage is frontend development and full project integration.

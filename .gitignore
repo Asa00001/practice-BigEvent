@@ -36,4 +36,4 @@ build/
 .DS_Store
 
 ### Local development configuration (contains database credentials) ###
-src/main/resources/application-dev.yml
+backend/src/main/resources/application-dev.yml

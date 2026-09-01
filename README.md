@@ -149,34 +149,34 @@ The login page supports user registration and JWT-based authentication.
 
 Manage articles with pagination, category filtering, rich text editing, image upload, and CRUD operations.
 
-![Article Management](./docs/article_manage.png)
+![Article Management](./docs/article-manage.png)
 
 ### Category Management
 
 Create, edit, and delete article categories.
 
-![Category Management](./docs/category_manage.png)
+![Category Management](./docs/category-manage.png)
 
 
 ### User Profile
 
 Update personal information including nickname and email.
 
-![User Information](./docs/user_info.png)
+![User Information](./docs/user-info.png)
 
 
 ### Avatar Management
 
 Upload and update user avatars through Alibaba Cloud OSS.
 
-![Change Avatar](./docs/change_avatar.png)
+![Change Avatar](./docs/change-avatar.png)
 
 
 ### Password Reset
 
 Securely change the account password. Users are required to re-login after a successful password update.
 
-![Reset Password](./docs/reset_password.png)
+![Reset Password](./docs/reset-password.png)
 
 ---
 

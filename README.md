@@ -177,3 +177,11 @@ Upload and update user avatars through Alibaba Cloud OSS.
 Securely change the account password. Users are required to re-login after a successful password update.
 
 ![Reset Password](./docs/reset_password.png)
+
+---
+
+## Acknowledgements
+
+This project was completed as part of the Heima Programmer (黑马程序员) Spring Boot & Vue learning course.
+
+The frontend UI layout and project structure are based on the course materials, while the implementation, debugging, integration, and feature completion were completed during the learning process.
